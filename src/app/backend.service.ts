@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
@@ -7,7 +8,7 @@ import { catchError, retry } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class BackendService {
-  apiUrl: string = "http://localhost:3000"; //TODO add as config
+  apiUrl: string = environment.API_URL; //TODO add as config
 
   constructor(private http: HttpClient) {
   }
