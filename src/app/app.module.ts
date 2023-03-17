@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AchievementsByGameComponent } from './achievements-by-game/achievements-by-game.component';
 import { AchievementsByProfileComponent } from './achievements-by-profile/achievements-by-profile.component';
+import { AchievementItemComponent } from './achievement-item/achievement-item.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AchievementsByProfileComponent } from './achievements-by-profile/achiev
     HomeComponent,
     PageNotFoundComponent,
     AchievementsByGameComponent,
-    AchievementsByProfileComponent
+    AchievementsByProfileComponent,
+    AchievementItemComponent
   ],
   imports: [
     BrowserModule,
