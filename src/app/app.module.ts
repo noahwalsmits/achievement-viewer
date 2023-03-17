@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AchievementsByGameComponent } from './achievements-by-game/achievements-by-game.component';
+import { AchievementsByProfileComponent } from './achievements-by-profile/achievements-by-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AchievementsByGameComponent,
+    AchievementsByProfileComponent
   ],
   imports: [
     BrowserModule,
