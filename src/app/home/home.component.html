@@ -1,1 +1,8 @@
 <p>home works!</p>
+
+<button type="button" (click)="clear(); postEcho(messageToEcho)">echo</button>
+<button type="button" (click)="clear(); tryGet()">get</button>
+<p *ngIf="echo">API response is: "{{echo}}"</p>
+<p *ngIf="databaseResponse">database response is: "{{databaseResponse}}"</p>
+<p *ngIf="databaseResponse === undefined">no database response</p>
+<p *ngIf="error" class="error">{{error | json}}</p>
