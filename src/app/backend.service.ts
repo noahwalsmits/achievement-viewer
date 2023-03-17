@@ -8,16 +8,16 @@ import { catchError, retry } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class BackendService {
-  apiUrl: string = environment.API_URL; //TODO add as config
+  backendUrl: string = environment.BACKEND_URL; //TODO add as config
 
   constructor(private http: HttpClient) {
   }
 
   postEcho(echo: string) {
-    return this.http.post(this.apiUrl + '/echo', echo, { responseType: 'text' });
+    return this.http.post(this.backendUrl + '/echo', echo, { responseType: 'text' });
   }
 
   tryGet() {
-    return this.http.get(this.apiUrl, { responseType: 'text' });
+    return this.http.get(this.backendUrl, { responseType: 'text' });
   }
 }
