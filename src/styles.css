@@ -48,3 +48,7 @@ html {
 .header-navigation {
     float: right;
 }
+
+.error {
+    color: red;
+}
