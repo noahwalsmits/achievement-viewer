@@ -23,7 +23,10 @@ export class AchievementsByGameComponent implements OnInit {
       this.errorMessage = 'app id must be a number';
       return;
     }
-    //TODO make request to backend
+    this.backendService.getAchievements(appId).subscribe({
+      next: (data: string) => this.errorMessage = data,
+      error: error => this.errorMessage = error
+    })
   }
 
 }
