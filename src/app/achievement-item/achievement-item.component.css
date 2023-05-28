@@ -1,0 +1,21 @@
+.achievement-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border-color: gray;
+    border-width: 5px;
+    border-style: ridge;
+}
+
+.achievement-icon {
+    flex-basis: 10%;
+}
+
+img {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.achievement-data {
+    padding-left: 10px;
+}

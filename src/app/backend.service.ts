@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
@@ -19,5 +19,10 @@ export class BackendService {
 
   tryGet() {
     return this.http.get(this.backendUrl, { responseType: 'text' });
+  }
+
+  getAchievements(appId: number) {
+    let queryParameters = new HttpParams().append("appId", appId);
+    return this.http.get(this.backendUrl + '/achievementsByGame', {params: queryParameters, responseType: 'text'});
   }
 }

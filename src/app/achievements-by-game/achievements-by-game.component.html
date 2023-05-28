@@ -1,0 +1,10 @@
+<h1>list of achievements per game:</h1>
+
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+    <label for="gameSearch">enter app id </label>
+    <input id="gameSearch" type="text" formControlName="appId">
+    <button class="button" type="submit">search</button>
+    <label *ngIf="errorMessage" class="error">{{errorMessage}}</label>
+</form>
+
+<app-achievement-item></app-achievement-item>
